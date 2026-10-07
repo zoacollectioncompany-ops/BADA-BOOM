@@ -462,6 +462,18 @@
     border:0;
     filter:invert(92%) hue-rotate(180deg) brightness(0.92) contrast(0.92) saturate(0.9);
   }
+  .map-visual .pin-label{
+    position:absolute;
+    top:14px; left:14px;
+    z-index:2;
+    font-size:11px;
+    color:var(--bone);
+    background:var(--void);
+    padding:4px 10px;
+    border:1px solid var(--hair);
+    white-space:nowrap;
+    pointer-events:none;
+  }
   .map-visual::after{
     content:"";
     position:absolute; inset:0;
@@ -469,67 +481,23 @@
     border:1px solid var(--hair);
     box-shadow:inset 0 0 40px rgba(0,0,0,0.5);
   }
-  .place-card{
-    position:absolute;
-    top:14px; left:14px; right:14px;
-    z-index:2;
-    max-width:280px;
-    background:rgba(10,8,6,0.94);
-    border:1px solid var(--hair);
-    box-shadow:0 10px 30px rgba(0,0,0,0.5);
-  }
-  .place-card .thumb{
-    width:100%;
-    aspect-ratio:16/9;
-    background-image:var(--hero-img);
-    background-size:cover;
-    background-position:60% 35%;
-  }
-  .place-card .body{ padding:14px 16px 16px; }
-  .place-card .pname{
-    font-family:'Big Shoulders Display', sans-serif;
-    font-weight:700;
-    font-size:18px;
-    text-transform:uppercase;
-    color:var(--bone);
-    line-height:1.05;
-  }
-  .place-card .prow{
-    display:flex;
-    align-items:center;
-    gap:8px;
-    margin-top:8px;
-    font-size:12px;
-  }
-  .place-card .stars{ color:#f5b942; letter-spacing:1px; }
-  .place-card .rcount{ color:var(--ash); }
-  .place-card .category{
-    display:inline-block;
-    margin-top:8px;
-    font-size:10.5px;
-    letter-spacing:0.04em;
-    color:var(--red);
-    border:1px solid var(--red-deep);
-    padding:2px 9px;
-  }
-  .place-card .ig-btn{
+  .ig-btn{
     display:flex;
     align-items:center;
     justify-content:center;
     gap:8px;
-    margin-top:14px;
+    margin-top:18px;
     background:var(--red);
     color:var(--bone);
     font-family:'JetBrains Mono', monospace;
     font-size:11.5px;
     font-weight:700;
     letter-spacing:0.04em;
-    padding:11px 14px;
+    padding:12px 16px;
     transition:background .18s ease;
   }
-  .place-card .ig-btn:hover{ background:#ff2c42; }
-  .place-card .ig-btn svg{ width:14px; height:14px; flex:none; }
-  @media(max-width:480px){ .place-card{ max-width:none; } }
+  .ig-btn:hover{ background:#ff2c42; }
+  .ig-btn svg{ width:14px; height:14px; flex:none; }
   @media(max-width:820px){ .loc-grid{ grid-template-columns:1fr; gap:40px; } }
 
   /* ---------- FOOTER ---------- */
@@ -723,9 +691,12 @@
           <div class="val">Friday &amp; Saturday<span class="sub">Doors from 22:00 — close after last set</span></div>
 
           <div class="label">Getting There</div>
-          <div class="val">Inside the Old City moat, off Moonmuang Road. Grab or taxi drop-off right at the Soi 2 entrance.<br>
-            <a class="map-link" href="https://maps.app.goo.gl/z7vz15ZjS7UvUhjH6" target="_blank" rel="noopener">Open in Google Maps →</a>
-          </div>
+          <div class="val">Inside the Old City moat, off Moonmuang Road. Grab or taxi drop-off right at the Soi 2 entrance.</div>
+
+          <a class="ig-btn" href="https://www.instagram.com/badaboom.moonlight/" target="_blank" rel="noopener" style="display:inline-flex; max-width:280px;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+            Reservations on Instagram
+          </a>
         </div>
         <div class="map-visual">
           <iframe
@@ -734,18 +705,7 @@
             referrerpolicy="no-referrer-when-downgrade"
             title="BadaBoom Techno Club location map">
           </iframe>
-          <div class="place-card">
-            <div class="thumb"></div>
-            <div class="body">
-              <div class="pname">BadaBoom Late Night Techno Bar</div>
-              <div class="prow"><span class="stars">★★★★★</span><span class="rcount">5.0 (12)</span></div>
-              <div class="category">Bar</div>
-              <a class="ig-btn" href="https://www.instagram.com/badaboom.moonlight/" target="_blank" rel="noopener">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
-                Reservations on Instagram
-              </a>
-            </div>
-          </div>
+          <div class="pin-label">BadaBoom Late Night Techno Bar</div>
         </div>
       </div>
     </div>

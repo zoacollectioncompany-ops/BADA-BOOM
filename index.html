@@ -609,6 +609,63 @@
     outline:2px solid var(--red);
     outline-offset:3px;
   }
+
+  /* ---------- MOBILE POLISH ---------- */
+  html, body{ overflow-x:hidden; }
+  @media(max-width:860px){
+    .footer-top{ grid-template-columns:1fr; gap:36px; }
+  }
+  @media(max-width:640px){
+    body{ font-size:14.5px; }
+    .wrap{ padding:0 20px; }
+    .nav-inner{ padding:10px 20px; }
+    .brand{ font-size:17px; gap:8px; }
+    .brand img{ height:26px; }
+    .nav-cta{ padding:9px 14px; font-size:11.5px; }
+
+    section{ padding:72px 0; }
+    .section-head{ margin-bottom:36px; gap:14px; }
+    .section-note{ max-width:none; }
+
+    .hero{ min-height:auto; padding-top:76px; padding-bottom:36px !important; }
+    .hero-photo{ background-position:72% 30%; }
+    .hero-photo::after{
+      background:
+        linear-gradient(180deg, rgba(10,8,6,0.35) 0%, rgba(10,8,6,0.62) 45%, var(--void) 98%),
+        radial-gradient(600px 400px at 70% 10%, rgba(228,19,42,0.14), transparent 60%);
+    }
+    .hero-inner{ padding:56px 20px 8px; }
+    .hero-eyebrow{ font-size:11.5px; margin-bottom:18px; }
+    .hero h1{ font-size:clamp(72px, 24vw, 120px); }
+    .hero-sub{ font-size:14px; margin-top:20px; }
+
+    .hero-meta{
+      grid-template-columns:1fr;
+      margin-top:32px;
+      max-width:none;
+    }
+    .hero-meta > div{
+      display:flex; justify-content:space-between; align-items:baseline;
+      padding:14px 0; border-bottom:1px solid var(--hair);
+    }
+    .hero-meta .label, .hero-meta .value{ padding:0; border:none; }
+    .hero-meta .label{ margin-bottom:0; }
+    .hero-meta .value{ font-size:18px; text-align:right; }
+
+    .event-date{ font-size:26px; }
+    .event-main .name{ font-size:20px; }
+    .rule{ grid-template-columns:36px 1fr; gap:14px; }
+
+    .loc-grid{ gap:28px; }
+    .loc-block .val{ margin-bottom:24px; }
+    .ig-btn{ width:100%; max-width:none !important; padding:14px 16px; font-size:12px; }
+    .map-visual{ aspect-ratio:1/1; }
+    .map-visual .pin-label{ top:10px; left:10px; font-size:10.5px; }
+
+    footer{ padding:48px 0 32px; }
+    .footer-brand .display{ font-size:32px; }
+    .footer-bottom{ flex-direction:column; gap:6px; }
+  }
 </style>
 </head>
 <body>
@@ -767,15 +824,13 @@
         <div class="display">BadaBoom</div>
         <p>An underground techno and house room in Chiang Mai's Old City. Weekends only, no exceptions.</p>
         <div class="footer-social">
-          <a href="#" target="_blank" rel="noopener">Instagram</a>
-          <a href="#" target="_blank" rel="noopener">Facebook</a>
-          <a href="#" target="_blank" rel="noopener">RA / Tickets</a>
+          <a href="https://www.instagram.com/badaboom.moonlight/" target="_blank" rel="noopener">Instagram</a>
         </div>
       </div>
       <div>
         <div class="signup-label">Reservations</div>
         <div class="val" style="color:var(--bone); font-size:15px; max-width:320px;">Reservations are made through our Instagram page.</div>
-        <a href="#" target="_blank" rel="noopener" class="map-link" style="margin-top:14px;">Message us on Instagram →</a>
+        <a href="https://www.instagram.com/badaboom.moonlight/" target="_blank" rel="noopener" class="map-link" style="margin-top:14px;">Message us on Instagram →</a>
       </div>
     </div>
     <div class="footer-bottom">
